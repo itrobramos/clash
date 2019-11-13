@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/type','TypeController@index');
+Route::get('/type/create','TypeController@create');
+Route::post('/type', 'TypeController@store');
+Route::delete('/type/{id}', 'TypeController@destroy');
+Route::get('/type/{id}/edit', 'TypeController@edit');
+Route::patch('/type/{id}','TypeController@update');
