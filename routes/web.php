@@ -12,5 +12,32 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
+
+//Types
+Route::get('/type','TypeController@index');
+Route::get('/type/create','TypeController@create');
+Route::post('/type', 'TypeController@store');
+Route::delete('/type/{id}', 'TypeController@destroy');
+Route::get('/type/{id}/edit', 'TypeController@edit');
+Route::patch('/type/{id}','TypeController@update');
+
+//Targets
+Route::get('/target','TargetController@index');
+Route::get('/target/create','TargetController@create');
+Route::post('/target', 'TargetController@store');
+Route::delete('/target/{id}', 'TargetController@destroy');
+Route::get('/target/{id}/edit', 'TargetController@edit');
+Route::patch('/target/{id}','TargetController@update');
+
+//Quality
+Route::get('/quality','QualityController@index');
+Route::get('/quality/create','QualityController@create');
+Route::post('/quality', 'QualityController@store');
+Route::delete('/quality/{id}', 'QualityController@destroy');
+Route::get('/quality/{id}/edit', 'QualityController@edit');
+Route::patch('/quality/{id}','QualityController@update');
+
+Auth::routes(['register'=>false]);
+Route::get('/home', 'HomeController@index')->name('home');
