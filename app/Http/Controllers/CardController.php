@@ -19,7 +19,7 @@ class CardController extends Controller
      */
     public function index()
     {
-        $data['cards'] = Card::paginate(10);
+        $data['cards'] = Card::orderBy('name','Asc')->get();
         return view('card/index',$data);
     }
 
@@ -81,9 +81,11 @@ class CardController extends Controller
      * @param  \App\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function show(Card $card)
+    public function show($id)
     {
-        //
+        $card = Card::findOrFail($id);
+        $data['card'] = $card;
+        return view('card.show', $data);
     }
 
     /**

@@ -19,7 +19,7 @@ class CreateCardsTable extends Migration
             $table->string('name',100);
             $table->string('description',600);
             $table->integer('elixir');
-            $table->string('range',20);
+            $table->string('range',40);
             $table->biginteger('speedId')->unsigned();
             $table->biginteger('qualityId')->unsigned();
             $table->biginteger('typeId')->unsigned();

@@ -20,7 +20,12 @@ class Card extends Model
 
     public function Target()
     {
-        return $this->belongsTo('App\Target', 'targetOd', 'id');
+        return $this->belongsTo('App\Target', 'targetId', 'id');
+    }
+
+    public function Speed()
+    {
+        return $this->belongsTo('App\Speed', 'speedId', 'id');
     }
 
 }

@@ -53,6 +53,7 @@ Route::get('/card/create','CardController@create');
 Route::post('/card', 'CardController@store');
 Route::delete('/card/{id}', 'CardController@destroy');
 Route::get('/card/{id}/edit', 'CardController@edit');
+Route::get('/card/{id}', 'CardController@show');
 Route::patch('/card/{id}','CardController@update');
 
 

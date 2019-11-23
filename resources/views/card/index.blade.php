@@ -17,8 +17,9 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>#</th>
+            <th></th>
             <th>Name</th>
+            <th></th>
             <th></th>
             <th></th>
 
@@ -27,10 +28,11 @@
         <tbody>
             @foreach($cards as $card)
             <tr>
-                <td class='col-md-1'>{{$loop->iteration}}</td>
-                <td class='col-md-9'>{{$card->name}}</td>
+                <td class='col-md-1'><img class = "rounded mx-auto d-block" width="80px;" src="{{asset($card->imageUrl)}}"></td>
+                <td class='col-md-1'>{{$card->name}}</td>
+                <td class='col-md-4'>{{$card->description}}</td>
+                <td class='col-md-1'><a href="{{ url('/card/' . $card->id ) }}" ><button class='btn btn-sm btn-primary'>View</button></a></td>
                 <td class='col-md-1'><a href="{{ url('/card/' . $card->id . '/edit/') }}" ><button class='btn btn-sm btn-primary'>Edit</button></a></td>
-                
                 <td class='col-md-1'>
                     <form method='post' action="{{ url('/card/' . $card->id) }}">
                         {{ csrf_field()}}
