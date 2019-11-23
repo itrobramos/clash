@@ -39,5 +39,14 @@ Route::delete('/quality/{id}', 'QualityController@destroy');
 Route::get('/quality/{id}/edit', 'QualityController@edit');
 Route::patch('/quality/{id}','QualityController@update');
 
+//Speed
+Route::get('/speed','SpeedController@index');
+Route::get('/speed/create','SpeedController@create');
+Route::post('/speed', 'SpeedController@store');
+Route::delete('/speed/{id}', 'SpeedController@destroy');
+Route::get('/speed/{id}/edit', 'SpeedController@edit');
+Route::patch('/speed/{id}','SpeedController@update');
+
+
 Auth::routes(['register'=>false]);
 Route::get('/home', 'HomeController@index')->name('home');
