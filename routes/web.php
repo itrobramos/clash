@@ -31,6 +31,13 @@ Route::delete('/target/{id}', 'TargetController@destroy');
 Route::get('/target/{id}/edit', 'TargetController@edit');
 Route::patch('/target/{id}','TargetController@update');
 
+//Quality
+Route::get('/quality','QualityController@index');
+Route::get('/quality/create','QualityController@create');
+Route::post('/quality', 'QualityController@store');
+Route::delete('/quality/{id}', 'QualityController@destroy');
+Route::get('/quality/{id}/edit', 'QualityController@edit');
+Route::patch('/quality/{id}','QualityController@update');
 
 Auth::routes(['register'=>false]);
 Route::get('/home', 'HomeController@index')->name('home');
