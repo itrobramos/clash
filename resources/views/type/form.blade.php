@@ -8,7 +8,7 @@
 
 <input type ='text' name='Name' id='Name' value = '{{ isset($type->name)?$type->name:""}}' class='form-control'>
 <br>
-<a href="{{ url('type')}}"><button class='btn btn-md btn-primary'>Back</button></a>
+<a href="{{ url('type')}}" class='btn btn-md btn-primary'>Back</a>
 
 <input type ='submit' value="{{ $Modo =='create' ? 'Add': 'Edit'}}" class='btn btn-md btn-success'/>
 @endsection

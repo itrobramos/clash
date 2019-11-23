@@ -33,7 +33,8 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="quality">Quality</a>
+                <a class="dropdown-item" href="card">Cards</a>
+                <a class="dropdown-item" href="quality">Quality</a>
                     <a class="dropdown-item" href="speed">Speed</a>
                     <a class="dropdown-item" href="target">Targets</a>
                     <a class="dropdown-item" href="type">Types</a>

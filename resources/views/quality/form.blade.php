@@ -13,6 +13,6 @@
 <input type ='color' name='Color' id='Color' value = '{{ isset($quality->cplor)?$quality->cplor:""}}' class='form-control'>
 <br>
 
-<a href="{{ url('quality')}}"><button class='btn btn-md btn-primary'>Back</button></a>
+<a href="{{ url('quality')}}" class='btn btn-md btn-primary'>Back</a>
 <input type ='submit' value="{{ $Modo =='create' ? 'Add': 'Edit'}}" class='btn btn-md btn-success'/>
 @endsection

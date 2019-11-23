@@ -47,6 +47,14 @@ Route::delete('/speed/{id}', 'SpeedController@destroy');
 Route::get('/speed/{id}/edit', 'SpeedController@edit');
 Route::patch('/speed/{id}','SpeedController@update');
 
+//Card
+Route::get('/card','CardController@index');
+Route::get('/card/create','CardController@create');
+Route::post('/card', 'CardController@store');
+Route::delete('/card/{id}', 'CardController@destroy');
+Route::get('/card/{id}/edit', 'CardController@edit');
+Route::patch('/card/{id}','CardController@update');
+
 
 Auth::routes(['register'=>false]);
 Route::get('/home', 'HomeController@index')->name('home');
