@@ -15,12 +15,22 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+//Types
 Route::get('/type','TypeController@index');
 Route::get('/type/create','TypeController@create');
 Route::post('/type', 'TypeController@store');
 Route::delete('/type/{id}', 'TypeController@destroy');
 Route::get('/type/{id}/edit', 'TypeController@edit');
 Route::patch('/type/{id}','TypeController@update');
-Auth::routes(['register'=>false]);
 
+//Targets
+Route::get('/target','TargetController@index');
+Route::get('/target/create','TargetController@create');
+Route::post('/target', 'TargetController@store');
+Route::delete('/target/{id}', 'TargetController@destroy');
+Route::get('/target/{id}/edit', 'TargetController@edit');
+Route::patch('/target/{id}','TargetController@update');
+
+
+Auth::routes(['register'=>false]);
 Route::get('/home', 'HomeController@index')->name('home');
